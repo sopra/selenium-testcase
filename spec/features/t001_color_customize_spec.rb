@@ -1,12 +1,11 @@
 #!env ruby
 
-require 'capybara/dsl'
 require 'capybara/rspec'
 
 Capybara.default_driver = :selenium
 Capybara.app_host = 'http://www.yahoo.co.jp/'
 
-describe "カラーカスタマイズテスト", :js => true, :type => :feature do
+describe "カラーカスタマイズテスト", :type => :feature do
 
     before(:each) do
         visit "/"
