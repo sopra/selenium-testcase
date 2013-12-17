@@ -1,4 +1,7 @@
 #!env ruby
 
-require 'capybara/dsl'
+require 'capybara/rspec'
+
+Capybara.default_driver = :selenium
+Capybara.app_host = 'http://www.yahoo.co.jp/'
 

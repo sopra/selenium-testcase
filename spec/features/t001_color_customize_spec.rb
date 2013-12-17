@@ -1,11 +1,8 @@
 #!env ruby
 
-require 'capybara/rspec'
+require File.dirname(__FILE__) + "/../spec_helper"
 
-Capybara.default_driver = :selenium
-Capybara.app_host = 'http://www.yahoo.co.jp/'
-
-describe "カラーカスタマイズテスト", :type => :feature do
+describe "カラーカスタマイズテスト", :js => true, :type => :feature do
 
     before(:each) do
         visit "/"
