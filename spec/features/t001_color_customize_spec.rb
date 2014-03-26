@@ -12,9 +12,9 @@ describe "カラーカスタマイズテスト", :js => true, :type => :feature 
         find('#clr2>a').click()
         sleep 1
 
-        Capybara.ignore_hidden_elements = false
+        # Capybara.ignore_hidden_elements = false
         expect( page ).to have_xpath '//link[@id="src0"]'
         expect( find('link#src0')[:href] ).to have_text 'http://k.yimg.jp/images/top/sp2/clr/130528/2.css'
-        Capybara.ignore_hidden_elements = true
+        # Capybara.ignore_hidden_elements = true
     end
 end
